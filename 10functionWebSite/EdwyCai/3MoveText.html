@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id='input'>
+	<button type="button" onclick="move()">>> Move left to right>></button>
+	<input type="text" id='output'>
+	<script type="text/javascript">
+		function move() {
+			var x = document.getElementById('input');
+			var xString = x.innerHTML;
+			var y = document.getElementById('output');
+			y.value = x.value;
+			x.value = "";
+		}
+	</script>
+</body>
+</html>

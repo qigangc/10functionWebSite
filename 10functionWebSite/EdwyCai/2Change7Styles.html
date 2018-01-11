@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2 onclick="changeStyle()">
+		<strong>Click this text</strong>
+	</h2>
+	<hr>
+	<div id='content'>Click "Click this text" above to change this
+		div in serveral ways</div>
+	<script>
+		function changeStyle() {
+			var x = document.getElementById('content');
+			x.innerHTML = "Change innerHTML, font 24px, border 5px, width 300px, float right, padding 50px, background?you guess";
+			x.style.border="solid red";
+			x.style.color="green";
+			x.style.backgroundColor="lightgrey";
+			x.style.fontSize="24px";
+			x.style.textAlign="center";
+			x.style.width="300px";
+			x.style.float="right";
+			x.style.padding="50px";
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button type="button" onclick="disappear()" id="buttonName">Hide</button><br><br>
+	<div id='context'>This text will appear and disappear</div>
+	<script>
+		function disappear() {
+			var x = document.getElementById('context');
+			var xString = x.innerHTML;
+			if (xString.length == 0)
+				x.innerHTML = "This text will appear and disappear";
+			else
+				x.innerHTML = "";
+			var y = document.getElementById('buttonName');
+			var yString = y.innerHTML;
+			if (yString == "Show")
+				y.innerHTML = "Hide";
+			else
+				y.innerHTML = "Show";
+		}
+	</script>
+</body>
+</html>

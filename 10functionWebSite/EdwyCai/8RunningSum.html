@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		Entera number:<input type="text" id='inPut' onchange="sumNum()">
+	</p>
+	<div id='outPut'>sum of[]=0</div>
+	<script>
+		var tot = 0;
+		var list = [];
+		function sumNum() {
+			var num = document.getElementById('inPut').value;
+			var sumAll = 0;
+			list.push(num);
+			for(i=0; i<list.length; i++){
+				sumAll += parseInt(list[i]);
+			}
+			document.getElementById('outPut').innerHTML = "sum of[" + list.toString() + "]=" + sumAll;
+			document.getElementById('inPut').value = "";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		Enter a name:<input type="text" id='input' onchange="typeName()">
+	</p>
+	<p>The array of names:</p>
+	<div id='output'></div>
+	<script>
+		var names = [];
+		function typeName(){
+			var inputName = document.getElementById('input').value;
+			names.push(inputName);
+			text = "";
+			for(i=0; i<names.length; i++){
+				text += (i+1) + ":" + names[i] + "<br>";
+			}
+			document.getElementById('output').innerHTML = text;
+			document.getElementById('input').value = '';
+		}
+	</script>
+	
+</body>
+</html>

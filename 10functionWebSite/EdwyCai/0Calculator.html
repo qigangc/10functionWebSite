@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h4>Calculator</h4>
+	<p>
+		x<input type="number" id="xInput"> <br>y<input
+			type="number" id="yInput">
+	</p>
+	<button onclick="toCalculator()">Show Results</button>
+	<br>
+	<p id="someId">
+		<!-- The innerHMTL -->
+		Waiting the Input
+	</p>
+	<script>
+		function toCalculator() {
+			var x = document.getElementById('xInput').value;
+			var y = document.getElementById('yInput').value;
+			var add = +x + +y;
+			var sub = +x - +y;
+			var mul = +x * +y;
+			var div = +x / +y;
+			var modulo = +x % +y;
+			var element = document.getElementById('someId');
+			element.innerHTML = x + ' + ' + y + ' = ' + add + "<br>" + x
+					+ ' - ' + y + ' = ' + sub + "<br>" + x + ' * ' + y + ' = '
+					+ mul + "<br>" + x + ' / ' + y + ' = ' + div + "<br>" + x
+					+ ' % ' + y + ' = ' + modulo + "<br>";
+		}
+	</script>
+</body>
+</html>

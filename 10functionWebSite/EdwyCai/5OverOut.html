@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id='content'
+		style="border: red solid 5px; background: pink; text-align: center; width: 200px; height: 25px;"
+		onmouseover="changeAdiv('entered')" onmouseout="changeAdiv('exited')">Hover
+		over Me</div>
+	<br>
+	<br>
+	<div id='output'
+		style="border: red solid 5px; background: pink; text-align: center; width: 200px; height: 25px;"></div>
+	<script>
+		var enterNum = 0;
+		var exitNum = 0;
+		function changeAdiv(inOrOut){
+			if (inOrOut == "entered"){
+				enterNum++;
+				document.getElementById('output').innerHTML = "Entered " + enterNum + " eventes";
+			}
+			else if (inOrOut == "exited"){
+				exitNum++;
+				document.getElementById('output').innerHTML = "Exited " + exitNum + " eventes";
+			}
+		}
+	</script>
+
+</body>
+</html>

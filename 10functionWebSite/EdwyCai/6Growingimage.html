@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Click the image to see it grow.</p>
+	<img src="SunShine.jpg" height="80px" width="60px"
+		onclick="incresPic()" id="pic">
+	<script>
+		var wid = 60;
+		var hgt = 80;
+		function incresPic() {
+			var main = document.getElementById('pic');
+			wid += 10;
+			hgt += 5;
+			main.style.width = wid + "px";
+			main.style.height = hgt + "px";
+		}
+	</script>
+</body>
+</html>

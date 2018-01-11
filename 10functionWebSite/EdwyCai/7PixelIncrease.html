@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		<button type="button" onclick="increse()">Increment by 1px</button>
+	</p>
+	<div id="content">Incrase my point size by 1px each click</div>
+	<script>
+		var px = 16;
+		function increse() {
+			var main = document.getElementById('content');
+			px += 1;
+			main.style.fontSize= px+"px";
+		}
+	</script>
+</body>
+</html>

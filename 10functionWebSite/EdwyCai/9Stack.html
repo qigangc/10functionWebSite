@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		Push<input type="text" id='inPut' onchange="pushNum()">
+		<button type="button" onclick="popNum()" >Pop</button>
+	</p>
+	<div id='outPut'></div>
+	<script>
+		var list=[];
+		function pushNum() {
+			var num = document.getElementById('inPut').value;
+			list.push(num);
+			var text = "<ul>"
+			for(i=list.length-1; i>=0; i--){
+				text += "<li>" + list[i] +"</li>"
+			}
+			text += "</ul>"
+			document.getElementById('inPut').value ="";
+			document.getElementById('outPut').innerHTML = text;
+		}
+		function popNum() {
+			list.pop();
+			var text = "<ul>"
+			for(i=list.length-1; i>=0; i--){
+				text += "<li>" + list[i] +"</li>"
+			}
+			text += "</ul>"
+			document.getElementById('outPut').innerHTML = text;
+		}
+	</script>
+</body>
+</html>
